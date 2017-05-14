@@ -1,5 +1,9 @@
 package org.nlogo.extensions.shell;
 
+// Originally written by Eric Russell for NetLogo versions 4.1 and 5.0, 
+// and updated to work with NetLogo 6.0 and Java 1.8 by Charles Staelin,
+// May 2017.
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -109,7 +113,7 @@ public class ShellExtension extends org.nlogo.api.DefaultClassManager {
       File newDir;
       String newDirName = args[0].getString();
       if (newDirName.startsWith("/") || newDirName.matches("^[a-zA-Z]:.*")) {
-                // Parse as absolute path if it starts with a slash 
+        // Parse as absolute path if it starts with a slash 
         // (Mac/Unix) or a drive letter and colon (Windows)
         newDir = new File(newDirName);
       } else {

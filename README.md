@@ -32,15 +32,19 @@ The shell extension inherits all the environment variables that were in place wh
 
 ## Installing
 
-Download and unzip to the extensions folder, which is inside the app folder inside your NetLogo program folder. This should create a `shell` subfolder that contains the `shell.jar` file and other potentially useful files. The `shell.jar` file in this package was built under NetLogo 6.0.1 and Java 1.8.
+Download and unzip to the extensions folder, which is inside the app folder inside the NetLogo program folder. This should create a `shell` subfolder that contains the `shell.jar` file and other potentially useful files. The `shell.jar` file in this package was built under NetLogo 6.0.1 and Java 1.8.
 
 For more information about NetLogo extensions in general, see the NetLogo User Manual.
 
 ## Building
 
-Use the NETLOGO environment variable to tell the Makefile which NetLogo.jar to compile against.  For example:
+The Makefile included in this package can be used to create the shell.jar file from the java source file. If you are running it from the app/extensions/shell folder in the NetLogo installation, you can simply enter "make". If you are in any other directory, you will need to first set the NETLOGO environment variable to tell the Makefile where to find the NetLogo installation.  For example:
 
-    NETLOGO=/Applications/NetLogo\\\ 5.1.0 make
+    export NETLOGO="/Applications/NetLogo 6.0.1"
+or
+    export NETLOGO="c:/Program Files/NetLogo 6.0.1"
+
+The "" are required because the directory names contain spaces.
 
 If compilation succeeds, `shell.jar` will be created.
 

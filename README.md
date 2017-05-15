@@ -38,10 +38,9 @@ For more information about NetLogo extensions in general, see the NetLogo User M
 
 ## Building
 
-The Makefile included in this package can be used to create the shell.jar file from the java source file. If you are running it from the app/extensions/shell folder in the NetLogo installation, you can simply enter "make". If you are in any other directory, you will need to first set the NETLOGO environment variable to tell the Makefile where to find the NetLogo installation.  For example:
+The Makefile included in this package can be used to create the shell.jar file from the java source file. If you are running it from the app/extensions/shell folder in the NetLogo installation, you can simply enter "make". (Depending on the system, you may need to do this as "administrator".) If you are in any other directory, you will need to first set the NETLOGO environment variable to tell the Makefile where to find the NetLogo installation.  For example:
 
     export NETLOGO="/Applications/NetLogo 6.0.1"
-or
     export NETLOGO="c:/Program Files/NetLogo 6.0.1"
 
 The "" are required because the directory names contain spaces.
